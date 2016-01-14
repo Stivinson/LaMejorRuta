@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="48dp"
+    android:orientation="vertical"
+    android:background="@color/royalblue"
+    tools:context="com.stivinsonmartinez.lamejorruta.RutasMedellin">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:src="@drawable/bus48"/>
+
+    <Spinner
+        android:id="@+id/sp_rutas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+
+        android:spinnerMode="dropdown"
+        >
+    </Spinner>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escoja La Ruta"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>
+    <!-- android:entries="@array/Rutas"-->

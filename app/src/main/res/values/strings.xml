@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">La Mejor Ruta</string>
+
+    <string-array name="Menu">
+        <item>Sistema Metro</item>
+        <item>Rutas de Buses</item>
+        <item>Encicla</item>
+        <item>Noticias</item>
+        <item>Acerca de ...</item>
+    </string-array>
+
+    <string-array name="Lineas">
+        <item>Linea A</item>
+        <item>Linea B</item>
+        <item>Linea K</item>
+        <item>Linea L</item>
+        <item>Linea J</item>
+        <item>Linea 1 de Bus</item>
+        <item>Linea 2 de Bus</item>
+    </string-array>
+
+    <string-array name="Rutas">
+        <item> </item>
+        <item>ruta300</item>
+        <item>ruta311</item>
+        <item>Circular sur</item>
+        <item>San lucas</item>
+        <item>Robledo</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
