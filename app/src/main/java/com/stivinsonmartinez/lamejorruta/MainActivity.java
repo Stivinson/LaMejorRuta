@@ -22,17 +22,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.client.ChildEventListener;
-import com.firebase.client.DataSnapshot;
-import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
-import com.firebase.client.MutableData;
-import com.firebase.client.Query;
-import com.firebase.client.Transaction;
-import com.firebase.client.ValueEventListener;
-
 public class MainActivity extends AppCompatActivity {
-    //private Firebase mRef;
     ListView listMenu;
     int opc=0;
     private Lista_Menu[] menu=
@@ -46,25 +36,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //firebase
-       /* Firebase.setAndroidContext(this);
-        mRef= new Firebase("https://enruta.firebaseio.com/");
-
-        //Lectura de informacion Metodo1
-
-        Firebase ruta = mRef.child("ruta300");
-        ruta.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                Toast.makeText(MainActivity.this, snapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-                Toast.makeText(MainActivity.this, "Lectura fallida: " + firebaseError.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });*/
-
 
         Adapter adapter=new Adapter(this,menu);
         listMenu=(ListView)findViewById(R.id.listview);
