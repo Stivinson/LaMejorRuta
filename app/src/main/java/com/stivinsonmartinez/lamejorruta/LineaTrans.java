@@ -27,6 +27,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.MutableData;
+import com.firebase.client.Query;
+import com.firebase.client.Transaction;
+import com.firebase.client.ValueEventListener;
+
 import java.net.URL;
 import java.util.List;
 
@@ -36,45 +45,20 @@ import java.util.List;
  */
 public class LineaTrans extends Fragment {
     ListView listMenu;
+    String selection;
     int opc=0;
-
-
-
-/*private String[] lineasM;
-
-
-    public LineaTrans() {
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_linea_trans,container,false);
-    }
-
-    @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-        lineasM=getResources().getStringArray(R.array.Lineas);
-        Toast.makeText(getActivity(), "Ha pulsado"+lineasM[position],Toast.LENGTH_SHORT).show();
-        int opc=position;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-       super.onCreate(savedInstanceState);
-        lineasM=getResources().getStringArray(R.array.Lineas);
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,lineasM));
-    }*/
-
-    //CRIDA LA LLISTA I LA FUNCIO DE LISTVIEW
+    private Firebase mRef;
     final String[] datos = new String[]{"Linea A", "Linea B", "Linea K","Linea L", "Linea J", "Linea 1 de buses","Linea 2 de buses"};
-
     public LineaTrans() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //firebase
+        Firebase.setAndroidContext(LineaTrans.this.getActivity());
+        mRef= new Firebase("https://enruta.firebaseio.com/");
 
         View rootView = inflater.inflate(R.layout.fragment_linea_trans, container, false);
 
@@ -88,24 +72,48 @@ public class LineaTrans extends Fragment {
                 opc=(int)parent.getItemIdAtPosition(position);
                 switch (opc){
                     case 0:
+                        selection="Linea A";
                         break;
                     case 1:
-                        startActivity(new Intent(getActivity(), MapsActivity.class));
+                        selection="Linea B";
                         break;
                     case 2:
-                        String mapURL = "https://www.google.com.co/maps/@6.2558089,-75.5844522,13.76z/data=!4m2!6m1!1szrEAbgXNHZ9Y.kI8HwmC3rr6M?hl=es";
-                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(mapURL));
-                        startActivity(intent);
+                        selection="Linea K";
                         break;
                     case 3:
-
+                        selection="Linea L";
                         break;
                     case 4:
-
+                        selection="Linea J";
+                        break;
+                    case 5:
+                        selection="Linea 1";
+                        break;
+                    case 7:
+                        selection="Linea 2";
                         break;
                     default:
                         break;
                 }
+
+
+                Firebase rutas = mRef.child(selection);
+                rutas.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot snapshot) {
+                        // Toast.makeText(RutasMedellin.this, snapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
+                        String mapURL =snapshot.getValue().toString();
+                       // Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(mapURL));
+                        Intent intent = new Intent(LineaTrans.this.getActivity(),MapViewActivity.class);
+                        intent.putExtra("Url",mapURL);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onCancelled(FirebaseError firebaseError) {
+                        Toast.makeText(LineaTrans.this.getActivity(), "Lectura fallida: " + firebaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
             }
         });

@@ -48,7 +48,7 @@ public class RutasMedellin extends AppCompatActivity implements AdapterView.OnIt
         posicion = position;
         selection = parent.getItemAtPosition(posicion).toString();
         if(selection.toString().equalsIgnoreCase("")){
-            Toast.makeText(RutasMedellin.this,"Selección actual: "+selection,Toast.LENGTH_SHORT).show();
+            //Toast.makeText(RutasMedellin.this,"Selección actual: "+selection,Toast.LENGTH_SHORT).show();
 
         }else {
             //Toast.makeText(RutasMedellin.this,"Selección actual: "+selection,Toast.LENGTH_SHORT).show();

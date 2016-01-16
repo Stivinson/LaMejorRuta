@@ -7,7 +7,7 @@
         <stroke
             android:width="3dp"
 
-            android:color="@color/royalblue" />
+            android:color="@color/steelblue" />
 
         <!-- altura del drawable, siempre debe ser superior al width anterior -->
         <size android:height="4dp" />

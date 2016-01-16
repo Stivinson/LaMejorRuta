@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="100dp"
-    android:background="@color/steelblue"
+    android:background="@color/darkseagreen"
     tools:context="com.stivinsonmartinez.lamejorruta.SplashActivity">
 
     <LinearLayout

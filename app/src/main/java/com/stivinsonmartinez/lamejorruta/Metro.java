@@ -81,8 +81,7 @@ public class Metro extends AppCompatActivity implements ActionBar.TabListener,Vi
             switch(position){
                 case 0:
                     return new LineaTrans();
-                    //return new LineaTrans();
-                case 1:
+                   case 1:
                     return new Tarifas();
                 case 2:
                     return new Horarios();

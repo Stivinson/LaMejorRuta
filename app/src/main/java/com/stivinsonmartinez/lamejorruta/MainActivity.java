@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                     new Lista_Menu(R.drawable.bus48,"Rutas medellin"),
                     new Lista_Menu(R.drawable.bike15,"Encicla"),
                     new Lista_Menu(R.drawable.globe_50,"Noticias"),
-                    new Lista_Menu(R.drawable.globe_50,"Acerca de ...")};
+                    new Lista_Menu(R.drawable.logoenruta,"Acerca de ...")};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
