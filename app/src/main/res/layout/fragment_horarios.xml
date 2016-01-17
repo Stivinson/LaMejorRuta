@@ -2,12 +2,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context="com.stivinsonmartinez.lamejorruta.Horarios">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/globe_50"/>
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/horarios"
+        android:background="@color/forestgreen"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lv_horario"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4:30 A.M - 11:00P.M."
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/gray"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/df_horario"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lineas"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5:00 A.M - 10:00P.M."
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/darkblue"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lineak"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8:30 A.M - 10:00P.M."
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lineaj"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9:00 A.M - 10:00P.M."
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/gray"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/lineal"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9:00 A.M - 6:00P.M."
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/gray"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/arvi"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+
 
 </FrameLayout>

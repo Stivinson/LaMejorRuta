@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MapsActivity.class));
                         break;
                     case 3:
-
+                        startActivity(new Intent(getApplicationContext(), NoticiasActivity.class));
                         break;
                     case 4:
                        // startActivity(new Intent(getApplicationContext(), pizzabar.class));

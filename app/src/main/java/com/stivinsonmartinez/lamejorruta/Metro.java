@@ -38,6 +38,8 @@ public class Metro extends AppCompatActivity implements ActionBar.TabListener,Vi
         actionBar.addTab(tab);
         tab = actionBar.newTab().setIcon(R.drawable.road41).setTabListener(this);
         actionBar.addTab(tab);
+        tab = actionBar.newTab().setIcon(R.drawable.logoenruta).setTabListener(this);
+        actionBar.addTab(tab);
 
     }
 
@@ -86,6 +88,8 @@ public class Metro extends AppCompatActivity implements ActionBar.TabListener,Vi
                 case 2:
                     return new Horarios();
                 case 3:
+                    return new Estaciones();
+                case 4:
                     return new ContactoMetro();
                 default:
                     return null;
@@ -95,7 +99,7 @@ public class Metro extends AppCompatActivity implements ActionBar.TabListener,Vi
 
         @Override
         public int getCount() {
-            return 4;
+            return 5;
         }
     }
 }

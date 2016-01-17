@@ -1,5 +1,24 @@
 <resources>
     <string name="app_name">La Mejor Ruta</string>
+    <string name="tarifas">Tarifas</string>
+    <string name="estaciones">Estaciones</string>
+    <string name="horarios">Horarios</string>
+    <string name="lv_horario">Lunes a Viernes</string>
+    <string name="df_horario">Domingos Y Festivos</string>
+    <string name="lineas">Lineas A, B ,1 y 2</string>
+    <string name="lineak">Linea K</string>
+    <string name="lineaj">Linea J</string>
+    <string name="lineal">Linea L(Cable ARVI)</string>
+    <string name="arvi">No presta servicio el primer dia habil de la semana</string>
+    <string name="contacto">Atencion Al Cliente</string>
+    <string name="informacionM">Para mayor informacion o enviar una queja,sugerencia o reclamo sobrenlos servicios del Metro, utilice los siguientes canales de contacto:</string>
+    <string name="telefono">444 95 98</string>
+    <string name="correo">Correo Electronico</string>
+    <string name="correo1">contactenos@metrodemedellin.gov.co</string>
+    <string name="paginaweb">Sitio WEB</string>
+    <string name="paginaweb1">www.metrodemedellin.gov.co</string>
+    <string name="holametro">Linea HOLA METRO</string>
+
 
     <string-array name="Menu">
         <item>Sistema Metro</item>
@@ -20,12 +39,55 @@
     </string-array>
 
     <string-array name="Rutas">
-        <item> </item>
-        <item>ruta300</item>
-        <item>ruta311</item>
-        <item>Circular sur</item>
-        <item>San lucas</item>
-        <item>Robledo</item>
+        <item>  </item>
+        <item>Aranjuez-Anillo A</item>
+        <item>Aranjuez-Intermedia</item>
+        <item>Avila</item>
+        <item>Barrio Bello Oriente</item>
+        <item>Barrio Pinal-Minorista</item>
+        <item>Barrio el Pinal</item>
+        <item>Bello Horizonte</item>
+        <item>Belén Recorrido 1</item>
+        <item>Belén Recorrido 2</item>
+        <item>Belén-Las Playas</item>
+        <item>Boyacá las Brisas</item>
+        <item>Circular Sur Derecha</item>
+        <item>Circular Sur Izquierda</item>
+        <item>Coonatra circular derecha</item>
+        <item>Coonatra circular izquierda</item>
+        <item>Doce de Octubre x Colombia</item>
+        <item>Doce de Octubre x Los Colores</item>
+        <item>El Poblado</item>
+        <item>El Salvador</item>
+        <item>Enciso-El Pinal</item>
+        <item>Estaciones aguacatala-poblado-industriales</item>
+        <item>Floresta-Anillo-La Quiebra</item>
+        <item>Floresta-Calasanz</item>
+        <item>Gratamira</item>
+        <item>Gratamira-Estación Acevedo</item>
+        <item>Intercontinental-La Loma</item>
+        <item>La Frontera-Estación Aguacatala</item>
+        <item>La Toma-Barrio Caicedo</item>
+        <item>Las Palmas</item>
+        <item>Las Palmas-Castropol-Estación Industriales</item>
+        <item>Las Palmas-Sierra Morena</item>
+        <item>Laureles Parque</item>
+        <item>Loma de los Bernal-La Palma</item>
+        <item>Loma el Tesoro-Estación Poblado</item>
+        <item>Poblado-Estación Aguacatala</item>
+        <item>Poblado-Exito</item>
+        <item>Quinta Linda</item>
+        <item>Ruta de la Salud Derecha</item>
+        <item>Ruta de la salud Izquierda</item>
+        <item>San Lucas Directo</item>
+        <item>Sanjose de la Cima-Universidad</item>
+        <item>Santa Cruz-Prado</item>
+        <item>Villa Hermosa-Los Angeles</item>
+        <item>Villatina</item>
+        <item>Violeta-Villa Café</item>
+
+
+
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -56,9 +56,11 @@ public class RutasMedellin extends AppCompatActivity implements AdapterView.OnIt
             rutas.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
-                   // Toast.makeText(RutasMedellin.this, snapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(RutasMedellin.this, snapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
                     String mapURL =snapshot.getValue().toString();
-                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(mapURL));
+                    // Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(mapURL));
+                    Intent intent = new Intent(RutasMedellin.this,MapViewActivity.class);
+                    intent.putExtra("Url",mapURL);
                     startActivity(intent);
                 }
 

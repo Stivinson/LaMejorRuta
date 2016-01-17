@@ -2,12 +2,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30sp"
     tools:context="com.stivinsonmartinez.lamejorruta.ContactoMetro">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/globe_50"/>
+        android:orientation="vertical">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/contacto"
+       android:gravity="center"
+       android:textSize="35sp"
+       android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/informacionM"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/holametro"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telefono"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/correo"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/correo1"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/gray" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/paginaweb"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/paginaweb1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/gray" />
+    </LinearLayout>
 
 </FrameLayout>

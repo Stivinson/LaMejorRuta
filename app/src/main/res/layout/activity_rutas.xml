@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="48dp"
     android:orientation="vertical"
-    android:background="@color/royalblue"
+
     tools:context="com.stivinsonmartinez.lamejorruta.RutasMedellin">
 
     <ImageView
@@ -30,7 +30,7 @@
         android:text="Escoja La Ruta"
         android:gravity="center_horizontal"
         android:textSize="30sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
 
 </LinearLayout>

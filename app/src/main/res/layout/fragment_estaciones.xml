@@ -11,15 +11,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/tarifas"
+        android:text="@string/estaciones"
         android:gravity="center_horizontal"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:textStyle="italic"/>
 
     <!-- TODO: Update blank fragment layout -->
-     <ExpandableListView android:id="@+id/list"
-         android:layout_marginTop="80dp"
+    <ExpandableListView android:id="@+id/list2"
+        android:layout_marginTop="80dp"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:scrollbarSize="20sp"/>

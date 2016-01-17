@@ -53,7 +53,7 @@ public class Tarifas extends Fragment {
 
     public class SavedTabsListAdapter extends BaseExpandableListAdapter {
 
-        private String[] groups = {"Univiaje", "2", "3", "4"};
+        private String[] groups = {"Univiaje", "2", "3", "4", "5", "6", "7","8", "9","    Cable ARVI"};
         private Integer[] imagen={R.drawable.bus48,R.drawable.bike15};
 
         public Integer getImagen(Integer i) {
@@ -65,10 +65,16 @@ public class Tarifas extends Fragment {
         }
 
         private String[][] children = {
-                {"Frecuente", "Adulto Mayor", "Estudiante Metro", "PMR", "Al portador"},
-                {"Frecuente", "Adulto Mayor", "Estudiante Metro", "PMR", "Al portador"},
-                {"Frecuente", "Adulto Mayor", "Estudiante Metro", "PMR", "Al portador"},
-                {"Frecuente", "Adulto Mayor", "Estudiante Metro", "PMR", "Al portador"}
+                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {"Frecuente                 $2.280", "Adulto Mayor           $2.200", "Estudiante Metro       $1.380", "PMR                           $1.850", "Al portador               $2.350"},
+                {"Frecuente                 $2.280", "Adulto Mayor           $2.200", "Estudiante Metro       $1.380", "PMR                           $1.850", "Al portador               $2.350"},
+                {"Frecuente                 $2.660", "Adulto Mayor           $2.600", "Estudiante Metro       $1.780", "PMR                           $2.250", "Al portador               $2.750"},
+                {"Frecuente                 $3.080", "Adulto Mayor           $3.000", "Estudiante Metro       $2.180", "PMR                           $2.650", "Al portador               $3.150"},
+                {"Frecuente                 $3.080", "Adulto Mayor           $3.000", "Estudiante Metro       $2.180", "PMR                           $2.650", "Al portador               $3.150"},
+                {"Perfil                      Transferencia     Ingreso      _______                  desde el metro    Directo", "Civica(con sisben)         $250        $600","Con sisben                       $600       $600","Sin sisben                         $4.600   $4.600"}
         };
 
         @Override
@@ -122,16 +128,44 @@ public class Tarifas extends Fragment {
         }
         @Override
         public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-           // AbsListView.LayoutParams lp = new AbsListView.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 64);
-            /*TextView textView = new TextView(Tarifas.this.getActivity());
+            Custom custom;
 
-            textView.setGravity(Gravity.RIGHT);
-            textView.setTextSize(25);
-            textView.setTextColor(R.color.red);
-            textView.setPadding(36, 0, 0, 0);
-            textView.setText(getGroup(i).toString());
-            return textView;*/
-            Custom custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.bike15,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia);
+            switch (i){
+                case 0:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.logoenruta,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    break;
+                case 1:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48);
+                    break;
+                case 2:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    break;
+                case 3:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.logoenruta);
+                    break;
+                case 4:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.tram5);
+                    break;
+                case 5:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    break;
+                case 6:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.tram5,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    break;
+                case 7:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.tram5,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.tram5);
+                    break;
+                case 8:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.tram5,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    break;
+                case 9:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia);
+                    break;
+                default:
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.tram5,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.tram5);
+                    break;
+            }
+
             return custom.getView();
         }
 
