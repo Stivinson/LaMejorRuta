@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
     int opc=0;
     private Lista_Menu[] menu=
             new Lista_Menu[]{
-                    new Lista_Menu(R.drawable.underground,"Sistema Metro"),
-                    new Lista_Menu(R.drawable.bus48,"Rutas medellin"),
-                    new Lista_Menu(R.drawable.bike15,"Encicla"),
-                    new Lista_Menu(R.drawable.globe_50,"Noticias"),
-                    new Lista_Menu(R.drawable.logoenruta,"Acerca de ...")};
+                    new Lista_Menu(R.drawable.metro,"Acerca de ..."),
+                    new Lista_Menu(R.drawable.bus48,"Acerca de ..."),
+                    new Lista_Menu(R.drawable.encicla,"Acerca de ..."),
+                    new Lista_Menu(R.drawable.noticias,"Acerca de ..."),
+                    new Lista_Menu(R.drawable.informacion,"Acerca de ...")};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
         Adapter adapter=new Adapter(this,menu);
         listMenu=(ListView)findViewById(R.id.listview);
         listMenu.setAdapter(adapter);
-
+        String[] value=getResources().getStringArray(R.array.Menu);
+        for(int i=0;i<5;i++){
+            menu[i].setOpcion(value[i]);
+        }
         listMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

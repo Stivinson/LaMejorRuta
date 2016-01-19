@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,9 +11,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
    <TextView
-       android:layout_width="match_parent"
+       android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:background="@color/green"
        android:text="@string/contacto"
+       android:layout_gravity="center_horizontal"
        android:gravity="center"
        android:textSize="35sp"
        android:textColor="@color/black" />
@@ -22,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/informacionM"
+        android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:textSize="14sp"
         android:textColor="@color/gray" />
@@ -32,6 +35,7 @@
             android:layout_marginTop="20sp"
             android:text="@string/holametro"
             android:gravity="center"
+            android:layout_gravity="center_horizontal"
             android:textSize="30sp"
             android:textColor="@color/black" />
 
@@ -40,6 +44,7 @@
             android:layout_height="wrap_content"
             android:text="@string/telefono"
             android:gravity="center"
+            android:layout_gravity="center_horizontal"
             android:textSize="25sp"
             android:textColor="@color/gray" />
 
@@ -49,6 +54,7 @@
             android:layout_marginTop="20sp"
             android:text="@string/correo"
             android:gravity="center"
+            android:layout_gravity="center_horizontal"
             android:textSize="30sp"
             android:textColor="@color/black" />
 
@@ -57,6 +63,7 @@
             android:layout_height="wrap_content"
             android:text="@string/correo1"
             android:gravity="center"
+            android:layout_gravity="center_horizontal"
             android:textSize="15sp"
             android:textColor="@color/gray" />
         <TextView
@@ -65,6 +72,7 @@
             android:layout_marginTop="20sp"
             android:text="@string/paginaweb"
             android:gravity="center"
+            android:layout_gravity="center_horizontal"
             android:textSize="30sp"
             android:textColor="@color/black" />
 
@@ -73,8 +81,9 @@
             android:layout_height="wrap_content"
             android:text="@string/paginaweb1"
             android:gravity="center"
+            android:layout_gravity="center_horizontal"
             android:textSize="20sp"
             android:textColor="@color/gray" />
     </LinearLayout>
 
-</FrameLayout>
+</ScrollView>

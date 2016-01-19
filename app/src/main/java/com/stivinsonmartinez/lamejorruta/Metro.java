@@ -14,7 +14,8 @@ import android.widget.LinearLayout;
 
 
 public class Metro extends AppCompatActivity implements ActionBar.TabListener,ViewPager.OnPageChangeListener{
-
+    private Integer[] imagenes ={R.drawable.lineas,R.drawable.dinero,R.drawable.clock96,R.drawable.metro,R.drawable.serviciocliente};
+    private String[] textos ={"","","","",""};
     private ViewPager MetroViewer;
 
     @Override
@@ -26,20 +27,30 @@ public class Metro extends AppCompatActivity implements ActionBar.TabListener,Vi
         MetroViewer = (ViewPager) findViewById(R.id.metropager);
         MetroViewer.setAdapter(adapter);
         MetroViewer.setOnPageChangeListener(this);
-
+        Support support;
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
+        ActionBar.Tab tab;
+        String[] values =getResources().getStringArray(R.array.mmm);
+        for(int i=0;i<5;i++){
+            textos[i]=values[i];
+        }
+        for(int i=0;i<5;i++){
+            support = new Support(this,textos[i],imagenes[i]);
+            tab = actionBar.newTab().setCustomView(support.getView()).setTabListener(this);
+            actionBar.addTab(tab);
+        }
+        /*
         ActionBar.Tab tab = actionBar.newTab().setText("Lineas Metro").setTabListener(this);
         actionBar.addTab(tab);
-        tab = actionBar.newTab().setIcon(R.drawable.dollar178).setTabListener(this);
+        tab = actionBar.newTab().setIcon(R.drawable.dinero).setTabListener(this);
         actionBar.addTab(tab);
-        tab = actionBar.newTab().setIcon(R.drawable.road41).setTabListener(this);
+        tab = actionBar.newTab().setIcon(R.drawable.informacion).setTabListener(this);
         actionBar.addTab(tab);
-        tab = actionBar.newTab().setIcon(R.drawable.road41).setTabListener(this);
+        tab = actionBar.newTab().setIcon(R.drawable.noticias).setTabListener(this);
         actionBar.addTab(tab);
-        tab = actionBar.newTab().setIcon(R.drawable.logoenruta).setTabListener(this);
-        actionBar.addTab(tab);
+        tab = actionBar.newTab().setIcon(R.drawable.serviciocliente).setTabListener(this);
+        actionBar.addTab(tab);*/
 
     }
 

@@ -53,27 +53,18 @@ public class Tarifas extends Fragment {
 
     public class SavedTabsListAdapter extends BaseExpandableListAdapter {
 
-        private String[] groups = {"Univiaje", "2", "3", "4", "5", "6", "7","8", "9","    Cable ARVI"};
-        private Integer[] imagen={R.drawable.bus48,R.drawable.bike15};
-
-        public Integer getImagen(Integer i) {
-            return imagen[i];
-         }
-
-        public void setImagen(Integer[] imagen) {
-            this.imagen = imagen;
-        }
+        private String[] groups = {getString(R.string.viaje1), "2", "3", "4", "5", "6", "7","8", "9","    Cable ARVI"};
 
         private String[][] children = {
-                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
-                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
-                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
-                {"Frecuente                 $1.880", "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
-                {"Frecuente                 $2.280", "Adulto Mayor           $2.200", "Estudiante Metro       $1.380", "PMR                           $1.850", "Al portador               $2.350"},
-                {"Frecuente                 $2.280", "Adulto Mayor           $2.200", "Estudiante Metro       $1.380", "PMR                           $1.850", "Al portador               $2.350"},
-                {"Frecuente                 $2.660", "Adulto Mayor           $2.600", "Estudiante Metro       $1.780", "PMR                           $2.250", "Al portador               $2.750"},
-                {"Frecuente                 $3.080", "Adulto Mayor           $3.000", "Estudiante Metro       $2.180", "PMR                           $2.650", "Al portador               $3.150"},
-                {"Frecuente                 $3.080", "Adulto Mayor           $3.000", "Estudiante Metro       $2.180", "PMR                           $2.650", "Al portador               $3.150"},
+                {getString(R.string.frecuente1), "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {getString(R.string.frecuente1), "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {getString(R.string.frecuente1), "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {getString(R.string.frecuente1), "Adulto Mayor           $1.800", "Estudiante Metro       $980", "PMR                           $1.450", "Al portador               $1.950"},
+                {getString(R.string.frecuente2), "Adulto Mayor           $2.200", "Estudiante Metro       $1.380", "PMR                           $1.850", "Al portador               $2.350"},
+                {getString(R.string.frecuente2), "Adulto Mayor           $2.200", "Estudiante Metro       $1.380", "PMR                           $1.850", "Al portador               $2.350"},
+                {getString(R.string.frecuente3), "Adulto Mayor           $2.600", "Estudiante Metro       $1.780", "PMR                           $2.250", "Al portador               $2.750"},
+                {getString(R.string.frecuente4), "Adulto Mayor           $3.000", "Estudiante Metro       $2.180", "PMR                           $2.650", "Al portador               $3.150"},
+                {getString(R.string.frecuente4), "Adulto Mayor           $3.000", "Estudiante Metro       $2.180", "PMR                           $2.650", "Al portador               $3.150"},
                 {"Perfil                      Transferencia     Ingreso      _______                  desde el metro    Directo", "Civica(con sisben)         $250        $600","Con sisben                       $600       $600","Sin sisben                         $4.600   $4.600"}
         };
 
@@ -132,37 +123,37 @@ public class Tarifas extends Fragment {
 
             switch (i){
                 case 0:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.logoenruta,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.tranvia,R.drawable.vacia,R.drawable.metro,R.drawable.vacia,R.drawable.metroplus,R.drawable.vacia,R.drawable.bus);
                     break;
                 case 1:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.metro,R.drawable.mas,R.drawable.metroplus);
                     break;
                 case 2:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.metroplus,R.drawable.mas,R.drawable.bus);
                     break;
                 case 3:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.logoenruta);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.metro,R.drawable.mas,R.drawable.tranvia);
                     break;
                 case 4:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.metro,R.drawable.mas,R.drawable.bus);
                     break;
                 case 5:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.metro,R.drawable.mas,R.drawable.metroplus,R.drawable.mas,R.drawable.bus);
                     break;
                 case 6:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.tram5,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.bus,R.drawable.mas,R.drawable.metroplus,R.drawable.mas,R.drawable.bus);
                     break;
                 case 7:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.tram5,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.bus,R.drawable.mas,R.drawable.metro,R.drawable.mas,R.drawable.bus);
                     break;
                 case 8:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.tram5,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.bus48,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.bus,R.drawable.mas,R.drawable.metro,R.drawable.mas,R.drawable.metroplus,R.drawable.mas,R.drawable.bus);
                     break;
                 case 9:
                     custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia);
                     break;
                 default:
-                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.tram5,R.drawable.vacia,R.drawable.underground,R.drawable.vacia,R.drawable.tram5);
+                    custom = new Custom(Tarifas.this.getActivity(), (String) getGroup(i),R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia,R.drawable.vacia);
                     break;
             }
 

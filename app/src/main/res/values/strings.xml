@@ -1,5 +1,22 @@
 <resources>
-    <string name="app_name">La Mejor Ruta</string>
+    <string name="app_name">EnRuta</string>
+    <string name="menu1">Sistema Metro</string>
+    <string name="menu2">Rutas Medellin</string>
+    <string name="menu3">Encicla</string>
+    <string name="menu4">Noticias</string>
+    <string name="menu5">Acerca de ...</string>
+    <string name="escogerbus">Escoja La Ruta:</string>
+    <string name="botonbus">Ver Mapa</string>
+    <string name="viaje1">Univiaje</string>
+    <string name="frecuente1">Frecuente                 $1.880</string>
+    <string name="frecuente2">Frecuente                 $2.280</string>
+    <string name="frecuente3">Frecuente                 $2.660</string>
+    <string name="frecuente4">Frecuente                 $3.080</string>
+    <string name="metro1">Lineas</string>
+    <string name="metro2">Tarifas</string>
+    <string name="metro3">Horarios</string>
+    <string name="metro4">Estaciones</string>
+    <string name="metro5">Atencion</string>
     <string name="tarifas">Tarifas</string>
     <string name="estaciones">Estaciones</string>
     <string name="horarios">Horarios</string>
@@ -18,16 +35,23 @@
     <string name="paginaweb">Sitio WEB</string>
     <string name="paginaweb1">www.metrodemedellin.gov.co</string>
     <string name="holametro">Linea HOLA METRO</string>
-
+    <string name="fseleccion">Opcion incorrecta!!</string>
+    <string name="noticias">Noticias</string>
 
     <string-array name="Menu">
-        <item>Sistema Metro</item>
-        <item>Rutas de Buses</item>
-        <item>Encicla</item>
-        <item>Noticias</item>
-        <item>Acerca de ...</item>
+        <item>@string/menu1</item>
+        <item>@string/menu2</item>
+        <item>@string/menu3</item>
+        <item>@string/menu4</item>
+        <item>@string/menu5</item>
     </string-array>
-
+    <string-array name="mmm">
+        <item>@string/metro1</item>
+        <item>@string/metro2</item>
+        <item>@string/metro3</item>
+        <item>@string/metro4</item>
+        <item>@string/metro5</item>
+    </string-array>
     <string-array name="Lineas">
         <item>Linea A</item>
         <item>Linea B</item>
@@ -39,7 +63,7 @@
     </string-array>
 
     <string-array name="Rutas">
-        <item>  </item>
+        <item> </item>
         <item>Aranjuez-Anillo A</item>
         <item>Aranjuez-Intermedia</item>
         <item>Avila</item>

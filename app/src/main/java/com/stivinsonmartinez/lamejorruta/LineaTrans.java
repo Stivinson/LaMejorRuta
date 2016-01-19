@@ -48,7 +48,7 @@ public class LineaTrans extends Fragment {
     String selection;
     int opc=0;
     private Firebase mRef;
-    final String[] datos = new String[]{"Linea A", "Linea B", "Linea K","Linea L", "Linea J", "Linea 1 de buses","Linea 2 de buses"};
+    final String[] datos = new String[]{"Linea A", "Linea B", "Linea K","Linea L", "Linea J", "Linea 1 de buses","Linea 2 de buses","Sistema metro"};
     public LineaTrans() {
     }
 
@@ -89,8 +89,11 @@ public class LineaTrans extends Fragment {
                     case 5:
                         selection="Linea 1";
                         break;
-                    case 7:
+                    case 6:
                         selection="Linea 2";
+                        break;
+                    case 7:
+                        selection="Sistema metro";
                         break;
                     default:
                         break;

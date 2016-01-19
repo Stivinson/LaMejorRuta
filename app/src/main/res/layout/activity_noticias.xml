@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="48dp"
+    android:padding="10sp"
+    android:background="@color/green"
     tools:context="com.stivinsonmartinez.lamejorruta.NoticiasActivity">
-
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/noticias"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:id="@+id/fff"
+            android:layout_marginBottom="10sp"/>
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listnews"
+            android:divider="@drawable/linea"
+            android:layout_gravity="center">
+        </ListView>
+    </LinearLayout>
+
+    <!--LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -45,6 +67,6 @@
             android:textColor="@color/gray"
             android:id="@+id/tv_noticia4"/>
 
-    </LinearLayout>
+    </LinearLayout-->
 
-</ScrollView>
+</LinearLayout>

@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,6 +19,7 @@
         android:text="@string/horarios"
         android:background="@color/forestgreen"
         android:gravity="center"
+        android:layout_gravity="center_horizontal"
         android:textSize="40sp"
         android:textColor="@color/black"/>
 
@@ -57,7 +58,7 @@
             android:text="5:00 A.M - 10:00P.M."
             android:gravity="center"
             android:textSize="10sp"
-            android:textColor="@color/darkblue"/>
+            android:textColor="@color/gray"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,4 +113,4 @@
     </LinearLayout>
 
 
-</FrameLayout>
+</ScrollView>
