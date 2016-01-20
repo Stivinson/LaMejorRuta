@@ -22,6 +22,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
+
 public class MainActivity extends AppCompatActivity {
     ListView listMenu;
     int opc=0;
@@ -41,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         listMenu=(ListView)findViewById(R.id.listview);
         listMenu.setAdapter(adapter);
         String[] value=getResources().getStringArray(R.array.Menu);
+        Firebase.setAndroidContext(this);
+        Firebase mRef = new Firebase("https://enruta.firebaseio.com/");
+        final Firebase encicla = mRef.child("ENCICLA");
         for(int i=0;i<5;i++){
             menu[i].setOpcion(value[i]);
         }
@@ -57,13 +65,27 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), RutasMedellin.class));
                         break;
                     case 2:
-                        startActivity(new Intent(getApplicationContext(), MapsActivity.class));
+                        encicla.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                String mapURL =dataSnapshot.getValue().toString();
+                                Intent intent = new Intent(getApplicationContext(), MapViewActivity.class);
+                                intent.putExtra("Url",mapURL);
+                                startActivity(intent);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                Toast.makeText(MainActivity.this, "Lectura fallida: " + firebaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
                         break;
                     case 3:
                         startActivity(new Intent(getApplicationContext(), NoticiasActivity.class));
                         break;
                     case 4:
                        // startActivity(new Intent(getApplicationContext(), pizzabar.class));
+                        startActivity(new Intent(getApplicationContext(), About.class));
                         break;
                     default:
                         break;

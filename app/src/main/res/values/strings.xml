@@ -37,6 +37,12 @@
     <string name="holametro">Linea HOLA METRO</string>
     <string name="fseleccion">Opcion incorrecta!!</string>
     <string name="noticias">Noticias</string>
+    <string name="abb">Acerca de ...</string>
+    <string name="Info1">Aplicacion realizada para el curso de programacion de dispositivos moviles, cuyo objetivo es ayudar a las personas a la 
+        hora de conseguir transporte en la ciudad de medellin, ofreciendo opciones como: metro, metrocable, metroplus y diferentes rutas de buses
+        \n\nProgramada por:\n\nSergio Gomez Arboleda\nStivinson Martinez Hernandez</string>
+    <string name="intgr">RUTAS INTEGRADAS</string>
+
 
     <string-array name="Menu">
         <item>@string/menu1</item>
@@ -109,7 +115,6 @@
         <item>Villa Hermosa-Los Angeles</item>
         <item>Villatina</item>
         <item>Violeta-Villa Café</item>
-
 
 
     </string-array>

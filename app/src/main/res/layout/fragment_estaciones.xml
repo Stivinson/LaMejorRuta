@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
+    android:padding="10sp"
     tools:context="com.stivinsonmartinez.lamejorruta.Tarifas">
 
     <LinearLayout
@@ -13,9 +13,9 @@
             android:layout_height="match_parent"
             android:text="@string/estaciones"
             android:gravity="center_horizontal"
-            android:background="@color/green"
+            android:background="@color/forestgreen"
             android:textColor="@color/black"
-            android:textSize="40dp"
+            android:textSize="35sp"
             android:textStyle="italic"/>
     </LinearLayout>
 

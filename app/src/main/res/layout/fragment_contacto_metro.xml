@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30sp"
+    android:padding="10sp"
     tools:context="com.stivinsonmartinez.lamejorruta.ContactoMetro">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,9 +11,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
    <TextView
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:background="@color/green"
+       android:background="@color/forestgreen"
        android:text="@string/contacto"
        android:layout_gravity="center_horizontal"
        android:gravity="center"
